@@ -15,7 +15,7 @@ Struttura del Codice
 Requisiti
 
     Java Development Kit (JDK)
-    Ambiente di sviluppo Java compatibile (es. Eclipse, IntelliJ IDEA, Visual Studio Code) o compilatore Java
+    Ambiente di sviluppo Java compatibile (es. Eclipse, IntelliJ IDEA, Visual Studio Code, BlueJ) o compilatore Java
 
 Utilizzo
 
