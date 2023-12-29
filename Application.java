@@ -68,9 +68,7 @@ public class Application extends JFrame {
         JMenu editMenu = new JMenu("Edit");
 
         /**
-         * creo l item aggiungi macchina in cui creo l action event in cui creo un
-         * ogetto macchina e lo
-         * aggiungo al textArea.
+         * creo l item Lista colori con JComboBox dei colori.
          */
         JMenuItem listColor = new JMenuItem("Lista colori");
 
@@ -142,7 +140,7 @@ public class Application extends JFrame {
         });
 
         /**
-         * panello secondario per i bottoni
+         * panello secondario per il bottone countChar
          */
         JPanel panelButton = new JPanel(new FlowLayout());
 
