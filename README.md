@@ -1,4 +1,4 @@
-Applicazione Java Swing con TextArea e Pannello di Azioni
+Applicazione Java Swing con TextArea 
 
 Descrizione
 
