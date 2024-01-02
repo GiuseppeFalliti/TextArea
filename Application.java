@@ -1,5 +1,8 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -68,7 +71,9 @@ public class Application extends JFrame {
         JMenu editMenu = new JMenu("Edit");
 
         /**
-         * creo l item Lista colori con JComboBox dei colori.
+         * creo l item aggiungi macchina in cui creo l action event in cui creo un
+         * ogetto macchina e lo
+         * aggiungo al textArea.
          */
         JMenuItem listColor = new JMenuItem("Lista colori");
 
@@ -140,17 +145,36 @@ public class Application extends JFrame {
         });
 
         /**
-         * panello secondario per il bottone countChar
+         * panello secondario per i bottoni
          */
         JPanel panelButton = new JPanel(new FlowLayout());
 
-        JButton countChar = new JButton("count char");
+        JTextField countChar = new JTextField (10);
+        countChar.setEditable(false);
+    
+    // Aggiungi un DocumentListener alla JTextArea per rilevare i cambiamenti nel testo
+    textArea.getDocument().addDocumentListener(new DocumentListener() {
+        @Override
+        public void insertUpdate(DocumentEvent e) {
+            updateCharCount();
+        }
 
-        countChar.addActionListener(e->{
-            int countchar = textArea.getText().length();
-            JOptionPane.showMessageDialog(this,countchar);
-        });
+        @Override
+        public void removeUpdate(DocumentEvent e) {
+            updateCharCount();
+        }
 
+        @Override
+        public void changedUpdate(DocumentEvent e) {
+            
+        }
+
+        private void updateCharCount() {  
+            int charCount = textArea.getText().length();
+            countChar.setText(String.valueOf(charCount));
+        }
+    });
+    
         
         editMenu.add(listColor);
         menuBar.add(editMenu);
