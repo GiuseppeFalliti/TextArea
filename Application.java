@@ -152,7 +152,7 @@ public class Application extends JFrame {
         JTextField countChar = new JTextField (10);
         countChar.setEditable(false);
     
-    // Aggiungi un DocumentListener alla JTextArea per rilevare i cambiamenti nel testo
+    // Aggiungo un DocumentListener alla JTextArea per rilevare i cambiamenti nel testo
     textArea.getDocument().addDocumentListener(new DocumentListener() {
         @Override
         public void insertUpdate(DocumentEvent e) {
